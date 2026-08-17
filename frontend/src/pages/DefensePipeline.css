@@ -1,0 +1,42 @@
+.pipeline-container{
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+    padding:40px;
+}
+
+.pipeline-container h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.pipeline{
+    max-width:800px;
+    margin:auto;
+}
+
+.box{
+    background:#1e293b;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    margin:10px 0;
+}
+
+.user{
+    border-left:6px solid #3b82f6;
+}
+
+.success{
+    border-left:6px solid #22c55e;
+}
+
+.response{
+    border-left:6px solid #f59e0b;
+}
+
+.arrow{
+    text-align:center;
+    font-size:30px;
+    margin:10px;
+}
