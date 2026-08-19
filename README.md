@@ -2,60 +2,60 @@
 
 > An interactive cybersecurity platform for simulating, detecting, analyzing, and defending against Large Language Model (LLM) prompt injection attacks.
 
+---
+
 ## 📌 About the Project
 
-**LLM Shield** is a web-based security testing platform developed to study the security risks associated with Large Language Models.
+**LLM Shield** is a web-based cybersecurity testing and research platform designed to study security risks associated with Large Language Models.
 
-The platform allows security testers to simulate different prompt injection attacks, analyze their risk levels, test defense mechanisms, monitor attack activity, and generate security reports through a centralized security dashboard.
+The platform allows users to simulate different types of prompt injection attacks, observe their behavior, apply defense mechanisms, monitor security events, and analyze attack statistics through a professional security dashboard.
 
-The project combines an **Attack Engine, Payload Library, LLM Engine, Defense Pipeline, Logging System, Analytics Dashboard, and Reporting Module** into a single platform.
+The project demonstrates how LLM applications can be tested against adversarial prompts and how defensive mechanisms can be integrated into an LLM security pipeline.
 
 ---
 
 ## 🎯 Objectives
 
-- Simulate different types of LLM prompt injection attacks.
-- Detect potentially malicious prompts.
-- Analyze attack risk levels.
-- Test multiple LLM defense mechanisms.
-- Monitor attack and defense activity.
-- Maintain security logs.
-- Visualize security statistics.
-- Generate security reports.
-- Provide a centralized security monitoring dashboard.
+- Identify security risks associated with LLM applications.
+- Simulate different prompt injection attack techniques.
+- Analyze the behavior and impact of malicious prompts.
+- Implement defense mechanisms against prompt injection.
+- Monitor attacks through security logs.
+- Provide analytics for security assessment.
+- Generate security reports for analysis.
+- Provide an interactive security operations dashboard.
 
 ---
 
-## ⚔️ Attack Types
+## 🚀 Key Features
 
-The platform supports security testing for different LLM attack categories:
+### 🔴 Attack Simulator
 
-- **Direct Prompt Injection**
-- **Indirect Prompt Injection**
-- **Jailbreak Attacks**
-- **Goal Hijacking**
-- **Prompt Leakage**
+Simulate different LLM attack scenarios including:
+
+- Direct Prompt Injection
+- Indirect Prompt Injection
+- Jailbreak Attacks
+- Goal Hijacking
+- Prompt Leakage
 
 ---
 
-## 🛡️ Defense Pipeline
+### 🛡️ Defense Pipeline
 
-LLM Shield uses multiple defense stages to analyze and protect LLM interactions.
+The platform applies multiple defensive stages to incoming prompts:
 
 ```text
-User Prompt
-     │
-     ▼
+User Input
+     ↓
 Input Sanitization
-     │
-     ▼
+     ↓
 Prompt Hardening
-     │
-     ▼
-Semantic Guard
-     │
-     ▼
+     ↓
+Semantic Security Analysis
+     ↓
+LLM Processing
+     ↓
 Output Filtering
-     │
-     ▼
-Safe Response
+     ↓
+Secure Response
