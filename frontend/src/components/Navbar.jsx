@@ -1,16 +1,46 @@
 import "./Navbar.css";
 
-function Navbar(){
+function Navbar() {
 
-    return(
+  return (
 
-        <nav className="navbar">
+    <nav className="navbar">
 
-            <h2>LLM Defense System</h2>
+      <div className="navbar-left">
 
-        </nav>
+        <div className="navbar-title">
+          LLM Security Operations Center
+        </div>
 
-    );
+        <div className="navbar-divider"></div>
+
+        <div className="navbar-subtitle">
+          Prompt Injection Detection & Defense
+        </div>
+
+      </div>
+
+
+      <div className="navbar-right">
+
+        <div className="api-status">
+
+          <span className="api-dot"></span>
+
+          API ONLINE
+
+        </div>
+
+
+        <div className="admin-badge">
+          ADMIN
+        </div>
+
+      </div>
+
+    </nav>
+
+  );
 
 }
 
