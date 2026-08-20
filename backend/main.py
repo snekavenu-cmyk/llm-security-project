@@ -214,11 +214,19 @@ def calculate_risk_score(
 
             "bypass restrictions": 35,
 
+            "bypass your safety restrictions": 50,
+
             "ignore safety": 35,
+
+            "ignore all safety restrictions": 50,
 
             "disable safety": 40,
 
+            "disable safety restrictions": 50,
+
             "remove restrictions": 35,
+
+            "remove safety restrictions": 45,
 
             "no restrictions": 30,
 
@@ -229,6 +237,10 @@ def calculate_risk_score(
             "do anything now": 35,
 
             "act as an unrestricted": 35,
+
+            "operate without any limitations": 40,
+
+            "without any limitations": 35,
 
             "ignore your previous": 35,
 

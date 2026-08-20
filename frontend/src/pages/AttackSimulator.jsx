@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "../services/api";
 import "./AttackSimulator.css";
 
 function AttackSimulator() {
@@ -7,8 +8,55 @@ function AttackSimulator() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
 
-  const runAttack = () => {
-    setResponse("Backend not connected yet...");
+  const runAttack = async () => {
+
+    if (!prompt.trim()) {
+      setResponse("Please enter a prompt.");
+      return;
+    }
+
+    setResponse("Running attack...");
+
+    try {
+
+      const result = await api.post(
+        "/llm",
+        {
+          prompt: prompt,
+          attack_type: attackType
+        },
+        {
+          headers: {
+            "x-api-key": "llm"
+          }
+        }
+      );
+
+      setResponse(
+        JSON.stringify(result.data, null, 2)
+      );
+
+    } catch (error) {
+
+      console.error("Backend Error:", error);
+
+      if (error.response) {
+
+        setResponse(
+          `Backend Error ${error.response.status}: ${
+            error.response.data?.detail ||
+            "Request failed"
+          }`
+        );
+
+      } else {
+
+        setResponse(
+          "Unable to connect to backend. Make sure the FastAPI server is running on port 8000."
+        );
+
+      }
+    }
   };
 
   return (
@@ -51,7 +99,7 @@ function AttackSimulator() {
         <h2>LLM Response</h2>
 
         <div className="response-box">
-          {response || "Response will appear here..."}
+          <pre>{response || "Response will appear here..."}</pre>
         </div>
 
       </div>
